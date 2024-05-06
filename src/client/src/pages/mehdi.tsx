@@ -152,8 +152,8 @@ function Mehdi() {
         ) : (
           <div>
             <p className=" text-center">
-              You have no Interactions with our Ecommerce. Please Simulate an
-              interaction to be ablke to se your recomendations
+              This User has no Interactions with our Ecommerce. Please Simulate an
+              interaction to be able to see your recomendations
             </p>
           </div>
         )}

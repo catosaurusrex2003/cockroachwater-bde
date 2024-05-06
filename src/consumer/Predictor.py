@@ -4,18 +4,34 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import MinMaxScaler
 from scipy.sparse import hstack
 
-# Sample initial data (loaded from your database or data storage)
+# initial songs data 
 data = {
-    "book_id": [1, 2, 3, 4, 5],
-    "title": ["Book A", "Book B", "Book C", "Book D", "Book E"],
-    "description": [
-        "Fantasy adventure magic dragons",
-        "Science fiction space stars",
-        "Historical fiction war love",
-        "Romance novel love",
-        "Mystery thriller suspense",
+    "book_id": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "title": [
+        "Thriller - Michael Jackson",
+        "Eine Kleine Nachtmusik - Wolfgang Amadeus Mozart",
+        "Nuthin' But a 'G' Thang - Dr. Dre & Snoop Dogg",
+        "Lean On - Major Lazer & DJ Snake ft. MØ",
+        "Always on My Mind - Elvis Presley",
+        "Old Town Road - Lil Nas X",
+        "Für Elise - Ludwig van Beethoven",
+        "The Real Slim Shady - Eminem",
+        "Where Are Ü Now - Jack Ü & Justin Bieber",
+        "California Dreamin' - The Mamas and the Papas"
     ],
-    "clicks": [10, 20, 30, 40, 50],
+    "description": [
+        "Iconic pop song known for its infectious rhythm, catchy melody, and spooky lyrics. A cultural phenomenon, especially during Halloween.",
+        "Masterpiece of classical music, a lively and elegant serenade with balanced melodies and joyful mood, timeless.",
+        "Classic hip-hop track with smooth beats, rhythmic vocals, and a laid-back vibe, showcasing West Coast rap's distinct style.",
+        "EDM hit with a global appeal, repetitive beats, uplifting melody, and fusion of Indian and Western sounds.",
+        "Heartfelt ballad exploring themes of regret and longing, with emotional lyrics and soulful delivery.",
+        "Genre-blending hit combining country elements with trap beats, sparking debates about genre boundaries and authenticity.",
+        "Instantly recognizable piano composition, delicate yet spirited melody, a favorite among classical music enthusiasts.",
+        "Witty and controversial lyrics in a satirical take on celebrity culture and self-identity, showcasing rap's storytelling power.",
+        "Collaboration blending electronic dance music with pop vocals, emotional undertones, and infectious beat.",
+        "Folk-rock classic contrasting sunny lyrics with a melancholic melody, reflecting longing for warmer days and pursuit of dreams."
+    ],
+    "clicks": [10, 20, 30, 20, ],
     "ratings": [4.0, 3.5, 4.5, 4.0, 3.0],
     "likes": [100, 200, 300, 400, 500],
     "orders": [10, 20, 30, 40, 50],
