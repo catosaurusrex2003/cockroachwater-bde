@@ -85,7 +85,7 @@ function Mehdi() {
       </div>
       <hr />
       <div className="flex justify-between items-center gap-1 w-full">
-        <span>Book_id</span>
+        <span>Song_id</span>
         <input
           onChange={(e) => handleInputChange("book_id", e.target.value)}
           className="w-1/2 border-gray-300 border rounded-sm p-1 px-2"
@@ -109,7 +109,7 @@ function Mehdi() {
       </div>
       <hr />
       <div className="flex justify-between items-center gap-1 w-full">
-        <span>Clicks</span>
+        <span>Plays</span>
         <input
           onChange={(e) => handleInputChange("clicks", e.target.value)}
           className="w-1/2 border-gray-300 border rounded-sm p-1 px-2"
@@ -117,7 +117,7 @@ function Mehdi() {
       </div>
       <hr />
       <div className="flex justify-between items-center gap-1 w-full">
-        <span>Orders</span>
+        <span>Shares</span>
         <input
           onChange={(e) => handleInputChange("orders", e.target.value)}
           className="w-1/2 border-gray-300 border rounded-sm p-1 px-2"
@@ -132,14 +132,6 @@ function Mehdi() {
       </button>
 
       <div className="flex ">
-        {/* {latestRecom?.user_not_found == "true" && (
-          <div>
-            <p>
-              You have no Interactions with our Ecommerce. Please Simulate an
-              interaction to be ablke to se your recomendations
-            </p>
-          </div>
-        )} */}
         {latestRecom?.books && latestRecom?.books.length > 0 ? (
           <div className="flex flex-col items-center w-full">
             <span className=" font-medium">

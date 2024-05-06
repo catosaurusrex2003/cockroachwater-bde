@@ -31,10 +31,10 @@ data = {
         "Collaboration blending electronic dance music with pop vocals, emotional undertones, and infectious beat.",
         "Folk-rock classic contrasting sunny lyrics with a melancholic melody, reflecting longing for warmer days and pursuit of dreams."
     ],
-    "clicks": [10, 20, 30, 20, ],
-    "ratings": [4.0, 3.5, 4.5, 4.0, 3.0],
-    "likes": [100, 200, 300, 400, 500],
-    "orders": [10, 20, 30, 40, 50],
+    "clicks": [10, 20, 30, 20, 10, 40, 30, 50, 60, 50 ],
+    "ratings": [4.0, 3.5, 4.5, 4.0, 3.0,4.0, 3.5, 4.5, 4.0, 3.0],
+    "likes": [100, 200, 300, 400, 200, 100, 200, 300, 400, 200],
+    "orders": [10, 20, 15, 13, 7, 12, 30, 3, 50, 10],
 }
 
 df_books = pd.DataFrame(data)
