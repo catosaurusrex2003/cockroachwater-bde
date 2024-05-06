@@ -2,6 +2,13 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, expr, from_json
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType
 from Predictor import predictor
+import pyspark
+print(pyspark.__version__)
+import py4j
+print(py4j.__version__)
+
+from model.dbConnect import songCollection
+
 
 spark = (
     SparkSession.builder.appName("KafkaConsumerExample")
@@ -51,6 +58,8 @@ def process_batch(df, epoch_id):
 
         collected_rows = df.collect()  # Be cautious with large datasets
 
+        print("HERE A")
+
         for row in collected_rows:
             clicks = row.clicks
             ratings = row.ratings
@@ -58,7 +67,13 @@ def process_batch(df, epoch_id):
             orders = row.orders
             user_id = row.user_id
             book_id = row.book_id
-
+            print("HERE B")
+            print(f"click {clicks}")
+            print(f"ratings {ratings}")
+            print(f"likes {likes}")
+            print(f"orders {orders}")
+            print(f"user_id {user_id}")
+            print(f"book_id {book_id}")
             # Assuming 'predictor' is a function that takes these parameters and returns a list of recommended books
             recommended_books = predictor(
                 clicks,
@@ -68,6 +83,18 @@ def process_batch(df, epoch_id):
                 user_id,
                 book_id
             )
+
+            document = {
+                "user_id": user_id,
+                "books": recommended_books
+            }
+            filter_condition = {"user_id": document["user_id"]}
+
+            try:
+                result = songCollection.update_one(filter_condition, {"$set": document}, upsert=True)
+                print(f"Document inserted with _id: {result.inserted_id}")
+            except Exception as e:
+                print(f"An error occurred: {e}")
 
             # Log the recommended books
             print(f"Recommended books for user {user_id}: {recommended_books}")
