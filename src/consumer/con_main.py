@@ -48,18 +48,11 @@ def process_batch(df, epoch_id):
 
     # Check if the DataFrame is empty
     if not df.rdd.isEmpty():
-        # Example transformation
-        # df = df.withColumn("new_metric", df.clicks * 10 + df.ratings)
-        # df = df.filter(df.ratings >= 3)
-        # df = df.groupBy("book_id").agg({"ratings": "avg", "clicks": "sum"})
 
         # Output the processed data
         df.show()
-
-        collected_rows = df.collect()  # Be cautious with large datasets
-
+        collected_rows = df.collect()  # process each row of a batch
         print("HERE A")
-
         for row in collected_rows:
             clicks = row.clicks
             ratings = row.ratings
