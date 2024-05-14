@@ -53,10 +53,6 @@ export function MainView() {
           <DropdownMenu open={open} onOpenChange={setOpen}>
             <DropdownMenuTrigger className="rounded-full">
               <div className="relative transition-all flex flex-row items-center justify-center gap-x-2 bg-black p-[2px] rounded-full hover:bg-stone-700/70">
-                <span className="absolute flex h-5 w-5 animate-bounce items-center justify-center -right-2 top-0 z-10">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
-                </span>
                 <Avatar className="h-7 w-7 shrink-0">
                   <AvatarImage src={`${siteConfig.links.github.url}.png`} />
                   <AvatarFallback>EA</AvatarFallback>
@@ -104,7 +100,7 @@ export function MainView() {
             </DropdownMenuContent>
           </DropdownMenu>
         </header>
-        <div className="mt-8 mb-8 px-8">
+        <div className="mt-8 mb-8 px-8 pb-40">
           {mainViewData.map((data) => (
             <section key={data.section.id} className="mt-9 first:mt-0">
               <div className="flex flex-row items-center justify-between">
@@ -115,7 +111,7 @@ export function MainView() {
                   Show all
                 </Button>
               </div>
-              <div className="mt-6 grid grid-cols-[repeat(auto-fit,minmax(180px,_1fr))] overflow-hidden grid-rows-[1fr_0_0_0_0_0] items-stretch justify-start gap-x-6">
+              <div className="mt-6 grid grid-cols-[repeat(auto-fit,minmax(180px,_1fr))] grid-rows-[1fr_0_0_0_0_0] items-stretch justify-start gap-x-6 gap-y-5">
                 {data.section.content.map((item) => (
                   <Card
                     key={item.id}

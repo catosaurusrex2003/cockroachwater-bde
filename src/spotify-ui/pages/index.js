@@ -1,6 +1,7 @@
 import { Sidebar } from "@/components/sidebar";
 import { MainView } from "@/components/main-view";
 import { MediaPlayer } from "@/components/media-player";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <MainView />
       </div>
       <MediaPlayer />
+      <Toaster />
     </div>
   );
 }

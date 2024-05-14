@@ -9,7 +9,7 @@ data = {
     "song_id": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     "title": [
         "Thriller - Michael Jackson",
-        "Eine Kleine Nachtmusik - Wolfgang Amadeus Mozart",
+        "All Along the Watchtower - John Wesley",
         "Nuthin' But a 'G' Thang - Dr. Dre & Snoop Dogg",
         "Lean On - Major Lazer & DJ Snake ft. MØ",
         "Always on My Mind - Elvis Presley",
@@ -21,7 +21,7 @@ data = {
     ],
     "description": [
         "Iconic pop song known for its infectious rhythm, catchy melody, and spooky lyrics. A cultural phenomenon, especially during Halloween.",
-        "Masterpiece of classical music, a lively and elegant serenade with balanced melodies and joyful mood, timeless.",
+        "is a song by American singer-songwriter Bob Dylan, featured on his 1967 album, John Wesley Harding. This song falls under the folk rock genre. Known for its conversation between a joker and a thief, it's often interpreted as a quest for freedom and a critique of societal norms.",
         "Classic hip-hop track with smooth beats, rhythmic vocals, and a laid-back vibe, showcasing West Coast rap's distinct style.",
         "EDM hit with a global appeal, repetitive beats, uplifting melody, and fusion of Indian and Western sounds.",
         "Heartfelt ballad exploring themes of regret and longing, with emotional lyrics and soulful delivery.",
