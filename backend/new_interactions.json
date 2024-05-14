@@ -1,0 +1,10 @@
+[
+    {
+        "user_id": 19,
+        "book_id": 3,
+        "clicks": 100,
+        "ratings": 5,
+        "likes": 43,
+        "orders": 0
+    }
+]

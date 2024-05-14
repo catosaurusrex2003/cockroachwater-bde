@@ -1,0 +1,82 @@
+[
+	{
+		"user_id": 66,
+		"book_id": 5,
+		"clicks": 25,
+		"ratings": 4,
+		"likes": 3,
+		"orders": 1
+	},
+	{
+		"user_id": 51,
+		"book_id": 10,
+		"clicks": 5,
+		"ratings": 2,
+		"likes": 0,
+		"orders": 1
+	},
+	{
+		"user_id": 60,
+		"book_id": 17,
+		"clicks": 10,
+		"ratings": 2,
+		"likes": 2,
+		"orders": 1
+	},
+	{
+		"user_id": 30,
+		"book_id": 13,
+		"clicks": 5,
+		"ratings": 4,
+		"likes": 0,
+		"orders": 1
+	},
+	{
+		"user_id": 87,
+		"book_id": 8,
+		"clicks": 28,
+		"ratings": 2,
+		"likes": 0,
+		"orders": 1
+	},
+	{
+		"user_id": 86,
+		"book_id": 19,
+		"clicks": 39,
+		"ratings": 4,
+		"likes": 3,
+		"orders": 1
+	},
+	{
+		"user_id": 64,
+		"book_id": 4,
+		"clicks": 19,
+		"ratings": 1,
+		"likes": 0,
+		"orders": 1
+	},
+	{
+		"user_id": 76,
+		"book_id": 4,
+		"clicks": 13,
+		"ratings": 3,
+		"likes": 2,
+		"orders": 1
+	},
+	{
+		"user_id": 7,
+		"book_id": 16,
+		"clicks": 21,
+		"ratings": 4,
+		"likes": 1,
+		"orders": 0
+	},
+	{
+		"user_id": 30,
+		"book_id": 17,
+		"clicks": 18,
+		"ratings": 5,
+		"likes": 1,
+		"orders": 1
+	}
+]

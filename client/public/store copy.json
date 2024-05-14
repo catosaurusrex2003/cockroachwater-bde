@@ -1,0 +1,202 @@
+[
+	{
+		"url": "1",
+		"title": "The Great Circle",
+		"author": "Maggie Shepsterd",
+		"rating": 4,
+		"genre": ["fiction", "adventure"],
+		"quantity": 100,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "2",
+		"title": "Beyond the Horizon",
+		"author": "Jonathan Field",
+		"rating": 3.5,
+		"genre": ["science fiction", "thriller"],
+		"quantity": 150,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "3",
+		"title": "Echoes of the Past",
+		"author": "Sarah Connors",
+		"rating": 4.2,
+		"genre": ["historical", "romance"],
+		"quantity": 85,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "4",
+		"title": "The Depths of Space",
+		"author": "Emily Tran",
+		"rating": 4.8,
+		"genre": ["science fiction"],
+		"quantity": 120,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "5",
+		"title": "The Mystery of Avalon",
+		"author": "Frank Poe",
+		"rating": 3.7,
+		"genre": ["mystery", "adventure"],
+		"quantity": 90,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "6",
+		"title": "Whispers in the Dark",
+		"author": "Lucy Maud",
+		"rating": 4.5,
+		"genre": ["thriller", "horror"],
+		"quantity": 70,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "7",
+		"title": "Lost in Time",
+		"author": "Marcus Aurelius",
+		"rating": 4,
+		"genre": ["science fiction", "adventure"],
+		"quantity": 200,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "8",
+		"title": "The Garden of Eden",
+		"author": "Helena Curtis",
+		"rating": 3.5,
+		"genre": ["romance", "drama"],
+		"quantity": 65,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "9",
+		"title": "Flight of the Navigator",
+		"author": "Robert Lewis",
+		"rating": 4.3,
+		"genre": ["adventure", "children"],
+		"quantity": 80,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "10",
+		"title": "Shadow of the Sphinx",
+		"author": "Carter Phillips",
+		"rating": 4.6,
+		"genre": ["mystery", "historical"],
+		"quantity": 110,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "11",
+		"title": "The Labyrinth",
+		"author": "Diane Groves",
+		"rating": 3.9,
+		"genre": ["fantasy", "adventure"],
+		"quantity": 95,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "12",
+		"title": "Nightfall",
+		"author": "Alexander Smith",
+		"rating": 4.1,
+		"genre": ["horror", "thriller"],
+		"quantity": 130,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "13",
+		"title": "The Eternal Sea",
+		"author": "Nora Roberts",
+		"rating": 3.8,
+		"genre": ["romance", "adventure"],
+		"quantity": 75,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "14",
+		"title": "The Cryptic Key",
+		"author": "Tom Clancy",
+		"rating": 4.7,
+		"genre": ["thriller", "mystery"],
+		"quantity": 180,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "15",
+		"title": "The Archer's Tale",
+		"author": "Bernard Cornwell",
+		"rating": 4,
+		"genre": ["historical", "adventure"],
+		"quantity": 50,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "16",
+		"title": "The Stone of Fire",
+		"author": "Geronimo Stilton",
+		"rating": 4.5,
+		"genre": ["children", "adventure"],
+		"quantity": 200,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "17",
+		"title": "Islands in the Stream",
+		"author": "Ernest Hemingway",
+		"rating": 4.2,
+		"genre": ["drama", "adventure"],
+		"quantity": 60,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "18",
+		"title": "The Silent Depths",
+		"author": "Mia Yoshida",
+		"rating": 4.9,
+		"genre": ["thriller", "mystery"],
+		"quantity": 100,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "19",
+		"title": "Gates of Fire",
+		"author": "Steven Pressfield",
+		"rating": 5,
+		"genre": ["historical", "war"],
+		"quantity": 85,
+		"reviews": "",
+		"description": "Lorem"
+	},
+	{
+		"url": "20",
+		"title": "Winter's Heart",
+		"author": "Robert Jordan",
+		"rating": 3.5,
+		"genre": ["fantasy", "epic"],
+		"quantity": 150,
+		"reviews": "",
+		"description": "Lorem"
+	}
+]
