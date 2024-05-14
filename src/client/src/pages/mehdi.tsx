@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 type eachdocument = {
   user_id?: number;
-  book_id?: number;
+  song_id?: number;
   clicks?: number;
   ratings?: number;
   likes?: number;
@@ -24,7 +24,7 @@ function Mehdi() {
       const response = await axios.post("http://127.0.0.1:5000/produce_spark", [
         {
           user_id: data.user_id,
-          book_id: data?.book_id,
+          song_id: data?.song_id,
           clicks: data?.clicks,
           ratings: data?.ratings,
           likes: data?.likes,
@@ -75,7 +75,8 @@ function Mehdi() {
   }, [data]);
 
   return (
-    <div className="flex flex-col w-1/3 mx-auto mt-20 bg-gray-100 border border-gray-300 rounded-sm p-5 gap-3">
+    <div className="flex flex-col w-1/3 mx-auto mt-20 bg-gray-100 border border-gray-300 rounded-sm p-5 gap-3 mb-20">
+      <span className=" font-bold text-xl">Interaction Simulator</span>
       <div className="flex justify-between items-center gap-1 w-full">
         <span>User_id</span>
         <input
@@ -87,7 +88,7 @@ function Mehdi() {
       <div className="flex justify-between items-center gap-1 w-full">
         <span>Song_id</span>
         <input
-          onChange={(e) => handleInputChange("book_id", e.target.value)}
+          onChange={(e) => handleInputChange("song_id", e.target.value)}
           className="w-1/2 border-gray-300 border rounded-sm p-1 px-2"
         />
       </div>
@@ -126,19 +127,19 @@ function Mehdi() {
       <hr />
       <button
         onClick={sendData}
-        className=" bg-blue-400 border border-blue-600 rounded-sm py-1 text-white font-medium"
+        className=" bg-blue-500 border border-blue-600 rounded-sm py-1 text-white font-medium"
       >
         Simulate Activity
       </button>
 
       <div className="flex ">
         {latestRecom?.books && latestRecom?.books.length > 0 ? (
-          <div className="flex flex-col items-center w-full">
+          <div className="flex flex-col items-center w-full gap-1">
             <span className=" font-medium">
               Recomended Songs for user {data?.user_id}:
             </span>
             {latestRecom?.books.map((a: string) => (
-              <span className=" text-center">{a}</span>
+              <span className=" bg-green-500 border border-green-600 px-2 py-1 rounded-sm text-center text-green-900 font-medium">{a}</span>
             ))}
           </div>
         ) : (

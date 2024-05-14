@@ -22,16 +22,16 @@ for message in consumer:
     # print(f"Received interaction: {interaction}")
 
     # Update interaction data
-    book_id = interaction["book_id"]
+    song_id = interaction["song_id"]
     user_id = interaction[
         "user_id"
-    ]  # Assuming each message contains user_id and book_id
+    ]  # Assuming each message contains user_id and song_id
     clicks = interaction["clicks"]
     ratings = interaction["ratings"]
     likes = interaction["likes"]
     orders = interaction["orders"]
 
     # Get recommendations
-    recommended_books = predictor(clicks, ratings, likes, orders, user_id, book_id)
+    recommended_books = predictor(clicks, ratings, likes, orders, user_id, song_id)
 
     print(f"Recommended books for user {user_id}: {recommended_books}")

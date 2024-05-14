@@ -14,7 +14,7 @@ CORS(app)
 schema = StructType(
     [
         StructField("user_id", IntegerType()),
-        StructField("book_id", IntegerType()),
+        StructField("song_id", IntegerType()),
         StructField("clicks", IntegerType()),
         StructField("ratings", IntegerType()),
         StructField("likes", IntegerType()),

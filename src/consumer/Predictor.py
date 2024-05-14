@@ -6,7 +6,7 @@ from scipy.sparse import hstack
 
 # initial songs data 
 data = {
-    "book_id": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "song_id": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     "title": [
         "Thriller - Michael Jackson",
         "Eine Kleine Nachtmusik - Wolfgang Amadeus Mozart",
@@ -51,9 +51,9 @@ interaction_matrix = scaler.fit_transform(
 # features_matrix = hstack([tfidf_matrix, interaction_matrix])
 features_matrix = hstack([tfidf_matrix, interaction_matrix]).tolil()
 
-def update_interactions(clicks, ratings, likes, orders, book_id):
+def update_interactions(clicks, ratings, likes, orders, song_id):
     # Properly update interaction metrics for a specific book
-    indices = df_books.index[df_books['book_id'] == book_id]
+    indices = df_books.index[df_books['song_id'] == song_id]
     if not indices.empty:
         idx = indices[0]
         df_books.at[idx, 'clicks'] += clicks
@@ -69,26 +69,26 @@ def update_interactions(clicks, ratings, likes, orders, book_id):
         # Update the global feature matrix
         features_matrix[idx] = book_features
 
-def recommend_books(book_id):
+def recommend_books(song_id):
     # Convert features_matrix to csr for efficient calculations if not already
     features_csr = features_matrix.tocsr()
 
     # Find the index of the book
-    book_idx = df_books.index[df_books['book_id'] == book_id][0]
+    song_idx = df_books.index[df_books['song_id'] == song_id][0]
 
     # Calculate cosine similarity for the specified book against all others
-    cosine_sim = cosine_similarity(features_csr[book_idx], features_csr).flatten()
+    cosine_sim = cosine_similarity(features_csr[song_idx], features_csr).flatten()
     # Find the indices of the books with the highest similarity scores, excluding the book itself
     recommended_indices = cosine_sim.argsort()[-4:][::-1]
-    recommended_indices = recommended_indices[recommended_indices != book_idx]  # Exclude itself
+    recommended_indices = recommended_indices[recommended_indices != song_idx]  # Exclude itself
     recommended_books = df_books.iloc[recommended_indices]['title'].tolist()
 
     return recommended_books
 
 
-def predictor(clicks, ratings, likes, orders, user_id, book_id):
-    update_interactions(clicks, ratings, likes, orders, book_id)
-    something = recommend_books(book_id)
+def predictor(clicks, ratings, likes, orders, user_id, song_id):
+    update_interactions(clicks, ratings, likes, orders, song_id)
+    something = recommend_books(song_id)
     return something
 
 

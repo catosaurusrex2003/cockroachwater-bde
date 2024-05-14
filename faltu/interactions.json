@@ -1,13 +1,13 @@
 [
-	{ "user_id": 1, "book_id": 1, "clicks": 3, "ratings": 5, "likes": 1, "orders": 1 },
-	{ "user_id": 2, "book_id": 2, "clicks": 1, "ratings": 4, "likes": 0, "orders": 0 },
-	{ "user_id": 1, "book_id": 3, "clicks": 2, "ratings": 3, "likes": 1, "orders": 0 },
-	{ "user_id": 3, "book_id": 5, "clicks": 5, "ratings": 4, "likes": 1, "orders": 1 },
-	{ "user_id": 4, "book_id": 4, "clicks": 2, "ratings": 2, "likes": 0, "orders": 0 },
+	{ "user_id": 1, "song_id": 1, "clicks": 3, "ratings": 5, "likes": 1, "orders": 1 },
+	{ "user_id": 2, "song_id": 2, "clicks": 1, "ratings": 4, "likes": 0, "orders": 0 },
+	{ "user_id": 1, "song_id": 3, "clicks": 2, "ratings": 3, "likes": 1, "orders": 0 },
+	{ "user_id": 3, "song_id": 5, "clicks": 5, "ratings": 4, "likes": 1, "orders": 1 },
+	{ "user_id": 4, "song_id": 4, "clicks": 2, "ratings": 2, "likes": 0, "orders": 0 },
 
-	{ "user_id": 1, "book_id": 1, "clicks": 3, "ratings": 5, "likes": 1, "orders": 1 },
-	{ "user_id": 2, "book_id": 2, "clicks": 1, "ratings": 4, "likes": 0, "orders": 0 },
-	{ "user_id": 1, "book_id": 3, "clicks": 2, "ratings": 3, "likes": 1, "orders": 0 },
-	{ "user_id": 3, "book_id": 5, "clicks": 5, "ratings": 4, "likes": 1, "orders": 1 },
-	{ "user_id": 4, "book_id": 4, "clicks": 2, "ratings": 2, "likes": 0, "orders": 0 }
+	{ "user_id": 1, "song_id": 1, "clicks": 3, "ratings": 5, "likes": 1, "orders": 1 },
+	{ "user_id": 2, "song_id": 2, "clicks": 1, "ratings": 4, "likes": 0, "orders": 0 },
+	{ "user_id": 1, "song_id": 3, "clicks": 2, "ratings": 3, "likes": 1, "orders": 0 },
+	{ "user_id": 3, "song_id": 5, "clicks": 5, "ratings": 4, "likes": 1, "orders": 1 },
+	{ "user_id": 4, "song_id": 4, "clicks": 2, "ratings": 2, "likes": 0, "orders": 0 }
 ]

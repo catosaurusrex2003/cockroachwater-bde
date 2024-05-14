@@ -13,7 +13,7 @@ spark = (
 schema = StructType(
     [
         StructField("user_id", IntegerType()),
-        StructField("book_id", IntegerType()),
+        StructField("song_id", IntegerType()),
         StructField("clicks", IntegerType()),
         StructField("ratings", IntegerType()),
         StructField("likes", IntegerType()),
@@ -31,7 +31,7 @@ df = (
 
 df = df.select(from_json(col("value"), schema).alias("data")).select("data.*")
 
-agg_df = df.groupBy("book_id").agg(
+agg_df = df.groupBy("song_id").agg(
     {"clicks": "sum", "ratings": "avg", "likes": "sum", "orders": "sum"}
 )
 
@@ -44,7 +44,7 @@ def process_batch(df, epoch_id):
         # Example transformation
         # df = df.withColumn("new_metric", df.clicks * 10 + df.ratings)
         # df = df.filter(df.ratings >= 3)
-        # df = df.groupBy("book_id").agg({"ratings": "avg", "clicks": "sum"})
+        # df = df.groupBy("song_id").agg({"ratings": "avg", "clicks": "sum"})
 
         # Output the processed data
         df.show()
@@ -54,7 +54,7 @@ def process_batch(df, epoch_id):
         likes = (df["likes"],)
         orders = (df["orders"],)
         user_id = (df["user_id"],)
-        book_id = (df["book_id"],)
+        song_id = (df["song_id"],)
 
         recommended_books = predictor(
             clicks,
@@ -62,7 +62,7 @@ def process_batch(df, epoch_id):
             likes,
             orders,
             user_id,
-            book_id,
+            song_id,
         )
 
         print(f"Recommended books for user {user_id}: {recommended_books}")

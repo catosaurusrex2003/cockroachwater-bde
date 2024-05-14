@@ -20,7 +20,7 @@ spark = (
 schema = StructType(
     [
         StructField("user_id", IntegerType()),
-        StructField("book_id", IntegerType()),
+        StructField("song_id", IntegerType()),
         StructField("clicks", IntegerType()),
         StructField("ratings", IntegerType()),
         StructField("likes", IntegerType()),
@@ -38,7 +38,7 @@ df = (
 
 df = df.select(from_json(col("value"), schema).alias("data")).select("data.*")
 
-agg_df = df.groupBy("book_id").agg(
+agg_df = df.groupBy("song_id").agg(
     {"clicks": "sum", "ratings": "avg", "likes": "sum", "orders": "sum"}
 )
 
@@ -59,14 +59,14 @@ def process_batch(df, epoch_id):
             likes = row.likes
             orders = row.orders
             user_id = row.user_id
-            book_id = row.book_id
+            song_id = row.song_id
             print("HERE B")
             print(f"click {clicks}")
             print(f"ratings {ratings}")
             print(f"likes {likes}")
             print(f"orders {orders}")
             print(f"user_id {user_id}")
-            print(f"book_id {book_id}")
+            print(f"song_id {song_id}")
             # Assuming 'predictor' is a function that takes these parameters and returns a list of recommended books
             recommended_books = predictor(
                 clicks,
@@ -74,7 +74,7 @@ def process_batch(df, epoch_id):
                 likes,
                 orders,
                 user_id,
-                book_id
+                song_id
             )
 
             document = {

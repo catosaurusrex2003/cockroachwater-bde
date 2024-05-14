@@ -8,7 +8,7 @@ from scipy.sparse import hstack
 
 # Sample initial data (should be loaded from your database or data storage)
 data = {
-    "book_id": [1, 2, 3, 4, 5],
+    "song_id": [1, 2, 3, 4, 5],
     "title": ["Book A", "Book B", "Book C", "Book D", "Book E"],
     "description": [
         "Fantasy adventure magic dragons",
@@ -38,10 +38,10 @@ interaction_matrix = scaler.fit_transform(
 features_matrix = hstack([tfidf_matrix, interaction_matrix])
 
 
-def predictor(clicks, ratings, likes, orders, user_id, book_id):
+def predictor(clicks, ratings, likes, orders, user_id, song_id):
     # Update df_books with new interaction (this is a simplified example)
     df_books.loc[
-        df_books["book_id"] == book_id, ["clicks", "ratings", "likes", "orders"]
+        df_books["song_id"] == song_id, ["clicks", "ratings", "likes", "orders"]
     ] += [clicks, ratings, likes, orders]
 
     # Recalculate features and similarity matrix (not efficient for large-scale use)
